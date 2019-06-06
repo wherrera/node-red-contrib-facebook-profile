@@ -1,0 +1,23 @@
+{
+  "name": "node-red-contrib-facebook-profile",
+  "version": "1.0.0",
+  "description": "access facebook profile with access_token",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wherrera/node-red-contrib-facebook-profile.git"
+  },
+  "author": "wherrera",
+  "license": "MIT",
+  "keywords": [
+    "node-red",
+    "facebook"
+  ],
+  "node-red": {
+    "nodes": {
+      "facebook-profile": "facebook-profile.js"
+    }
+  },
+  "dependencies": {
+    "fb": "^2.0.0"
+  }
+}

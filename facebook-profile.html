@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('facebook-profile',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            fb_appid: {value:""},
+            fb_appsecret: {value:""},
+            fb_fields: {value:"id,name"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"facebook-profile";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="facebook-profile">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fb_appid">Facebook APP ID</label>
+        <input type="text" id="node-input-fb_appid" placeholder="APP_ID">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fb_appsecret">Facebook APP Secret</label>
+        <input type="text" id="node-input-fb_appsecret" placeholder="APP_Secret">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fb_fields">Facebook Fields</label>
+        <input type="text" id="node-input-fb_fields" placeholder="FB_Fields">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="facebook-login">
+    <p>node allowing you to access facebook profile with an access_token</p>
+</script>
